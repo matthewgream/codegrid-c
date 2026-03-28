@@ -27,7 +27,7 @@ CFLAGS=\
     -Wvla \
     -Wno-overlength-strings \
     -O3
-COPTS=-DZOOM9_ONLY
+COPTS=-DZOOM9_ONLY -DTEST_MAIN
 LDFLAGS=-lm
 INCLUDES=
 TARGET=$(NAME)

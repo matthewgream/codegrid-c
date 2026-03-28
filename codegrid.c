@@ -1,6 +1,8 @@
 // ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+#ifndef _GNU_SOURCE
 #define _GNU_SOURCE
+#endif
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -245,6 +247,7 @@ int codegrid_lookup(double lat, double lng, char *out, size_t outlen) {
 
 // ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+#ifdef TEST_MAIN
 int main(void) {
     const struct {
         double lat, lng;
@@ -269,5 +272,6 @@ int main(void) {
     printf("\n%d total, %d passed, %d failed\n", numb, pass, numb - pass);
     return pass == numb ? EXIT_SUCCESS : EXIT_FAILURE;
 }
+#endif
 
 // ----------------------------------------------------------------------------------------------------------------------------------------------------------------
